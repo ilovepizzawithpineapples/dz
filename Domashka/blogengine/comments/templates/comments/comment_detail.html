@@ -1,0 +1,15 @@
+{% extends 'blog/post_detail.html' %}
+
+{% block content %}
+    <h1 class="mb-5">Comments:</h1>
+    {% for comment_ in COMMENTS %}
+        {% if comment_.blog_id == id %}
+        <div class="card mb-4">
+
+
+            <p class="card-text"></p>{{ comment_.body_comment }}
+
+        </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
